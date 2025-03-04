@@ -23,11 +23,12 @@ public class Player : MonoBehaviour
     private void Move(Vector3 direction)
     {
         var delta = direction - _transform.position;
-        if (Mathf.Sign(delta.x) != Mathf.Sign(_body.localScale.x)) Flip();
+        if (delta.sqrMagnitude > 1 && Mathf.Sign(delta.x) != Mathf.Sign(_body.localScale.x)) Flip();
         _transform.position += delta * MOVEMENT_SPEED * Time.deltaTime;
     }
     private void Flip()
     {
         _body.localScale = new Vector3(_body.localScale.x * -1,_body.localScale.y);
     }
+    
 }

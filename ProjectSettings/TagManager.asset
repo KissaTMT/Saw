@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BloodFloor
+    uniqueID: 3223618907
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BloodBody
+    uniqueID: 3322752465
+    locked: 0
+  - name: Face
+    uniqueID: 1366170503
+    locked: 0
+  - name: Particle
+    uniqueID: 49433023
     locked: 0

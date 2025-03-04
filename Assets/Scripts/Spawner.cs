@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _enemy;
+    [SerializeField] private Transform _player;
+    [SerializeField] private GameObject[] _enemies;
     private void Awake()
     {
         StartCoroutine(SpawnRoutine());
@@ -18,7 +19,7 @@ public class Spawner : MonoBehaviour
             var countEnemies = Random.Range(2, 5);
             for (var i = 0; i < countEnemies; i++)
             {
-                Instantiate(_enemy, new Vector2(Random.Range(-20,20),Random.Range(-40,40)), Quaternion.identity);
+                Instantiate(_enemies[Random.Range(0,_enemies.Length)], _player.position + new Vector3(Random.Range(-20,20),Random.Range(-20,20)), Quaternion.identity);
             }
         }
     }
