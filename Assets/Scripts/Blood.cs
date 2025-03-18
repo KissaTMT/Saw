@@ -30,7 +30,7 @@ public class Blood : MonoBehaviour
         for (var i = _renderer.color.a; i >= 0; i -= 0.01f)
         {
             _renderer.color = new Color(_renderer.color.r, _renderer.color.g, _renderer.color.b, i);
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(0.1f);
         }
         Destroy(gameObject);
     }

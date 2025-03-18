@@ -16,7 +16,7 @@ public class SpriteSorter : MonoBehaviour
 
         for (var i = 0; i < sortedCollection.Count; i++)
         {
-            sortedCollection[i].Sort(i * 2 + 2);
+            sortedCollection[i].Sort(i * 8 + 8);
         }
     }
 }
